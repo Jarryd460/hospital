@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by student on 2015/06/25.
  */
-public interface WardInvoice {
+public interface WardService {
 
     List<Ward> getWards();
 

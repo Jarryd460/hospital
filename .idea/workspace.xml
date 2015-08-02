@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08a2a83-6c63-4466-ab90-120b10c5ffdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/AppointmentPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/AppointmentResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/AppointmentServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/DoctorPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/DoctorResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/DoctorServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HospitalPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/HospitalResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/HospitalServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/InvoicePage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/InvoiceResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/InvoiceServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/PatientPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/PatientResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/PatientServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/TestSuite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/WardPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/WardResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/WardServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Appointment$Builder.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Appointment$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Appointment.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Appointment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/AppointmentCrudTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/AppointmentCrudTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/conf/factory/AppointmentFactory.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/conf/factory/AppointmentFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/domain/AppointmentTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/domain/AppointmentTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Demographic$Builder.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Demographic$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Demographic.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Demographic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Doctor$Builder.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Doctor$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Doctor.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Doctor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/DoctorCrudTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/DoctorCrudTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Invoice$Builder.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Invoice$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Invoice.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Invoice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/InvoiceCrudTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/InvoiceCrudTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/conf/factory/InvoiceFactory.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/conf/factory/InvoiceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/domain/InvoiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/domain/InvoiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Patient$Builder.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Patient$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Patient.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Patient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/PatientCrudTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/repository/PatientCrudTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Race.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Race.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Sex.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/domain/Sex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Address.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Appointment.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Appointment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/AppointmentCrudTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/AppointmentCrudTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/AppointmentFactory.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/AppointmentFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/AppointmentTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/AppointmentTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Demographic.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Demographic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Doctor.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Doctor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/DoctorCrudTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/DoctorCrudTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/HospitalService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/HospitalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/HospitalServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/HospitalServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Invoice.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Invoice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/InvoiceCrudTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/InvoiceCrudTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/InvoiceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/InvoiceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/InvoiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/InvoiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Patient.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Patient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/PatientCrudTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/repository/PatientCrudTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/PatientFactory.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/conf/factory/PatientFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Race.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Race.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Sex.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Sex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Ward.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/domain/Ward.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hospital.iws" />
@@ -111,7 +50,20 @@
     <favorites_list name="hospital" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4893204" vertical-offset="0" max-vertical-offset="515">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,7 +109,6 @@
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/PatientServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/HospitalServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/Invoice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/InvoiceResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/AppointmentResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/model/DoctorResource.java" />
@@ -170,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/PatientPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/WardPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/InvoicePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HomePage.java" />
       </list>
     </option>
   </component>
@@ -340,6 +292,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospital" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -832,16 +814,16 @@
       <workItem from="1438523612509" duration="10000" />
       <workItem from="1438524802628" duration="934000" />
       <workItem from="1438530240370" duration="154000" />
-      <workItem from="1438533155378" duration="4826000" />
+      <workItem from="1438533155378" duration="5025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90909000" />
+    <option name="totallyTimeSpent" value="91108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="663" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -864,7 +846,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854986" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2265861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2265861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="1.0" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -900,13 +882,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/domain/DoctorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17529881" vertical-offset="128" max-vertical-offset="630">
-          <caret line="16" column="154" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="154" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/DoctorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39442232" vertical-offset="0" max-vertical-offset="648">
@@ -1330,6 +1305,16 @@
           <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
           <folding>
             <element signature="e#869#886#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4893204" vertical-offset="0" max-vertical-offset="515">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

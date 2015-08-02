@@ -11,8 +11,8 @@ import java.util.Date;
  */
 public class InvoiceFactory {
 
-    public static Invoice createInvoice(Date date, Appointment appointment, BigDecimal amount) {
-        return new Invoice.Builder(amount).date(date).appointment(appointment).build();
+    public static Invoice createInvoice(Date date, BigDecimal amount) {
+        return new Invoice.Builder(amount).date(date).build();
     }
 
 }

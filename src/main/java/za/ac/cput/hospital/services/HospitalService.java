@@ -18,6 +18,4 @@ public interface HospitalService {
 
     List<Doctor> getDoctors(Long id);
 
-    List<Patient> getPatients(Long id);
-
 }

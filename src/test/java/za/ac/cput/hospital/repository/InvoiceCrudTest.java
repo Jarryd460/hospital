@@ -29,7 +29,7 @@ public class InvoiceCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         Date date = new Date();
-        Invoice invoice = InvoiceFactory.createInvoice(date, null, new BigDecimal(12000));
+        Invoice invoice = InvoiceFactory.createInvoice(date, new BigDecimal(12000));
         repository.save(invoice);
         id = invoice.getId();
         Assert.assertNotNull(invoice.getId());

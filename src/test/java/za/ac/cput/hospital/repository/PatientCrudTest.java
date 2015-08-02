@@ -7,12 +7,11 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import za.ac.cput.hospital.App;
+import za.ac.cput.hospital.conf.factory.AppointmentFactory;
 import za.ac.cput.hospital.conf.factory.PatientFactory;
-import za.ac.cput.hospital.domain.Contact;
-import za.ac.cput.hospital.domain.Demographic;
-import za.ac.cput.hospital.domain.Name;
-import za.ac.cput.hospital.domain.Patient;
+import za.ac.cput.hospital.domain.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -30,7 +29,7 @@ public class PatientCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         Date date = new Date();
-        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), new Contact.Builder("0821234567").build(), null, null);
+        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(date).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, null);
         repository.save(patient);
         id = patient.getId();
         Assert.assertNotNull(patient.getId());
@@ -40,6 +39,8 @@ public class PatientCrudTest extends AbstractTestNGSpringContextTests {
     public void testRead() throws Exception {
         Patient patient = repository.findOne(id);
         Assert.assertEquals(patient.getName().getLastName(), "Deane");
+        Assert.assertEquals(patient.getDemographic().getGender(), Sex.Male);
+        Assert.assertEquals(patient.getContact().getMobilePhoneNumber(), "0821234567");
     }
 
     @Test(dependsOnMethods = "testRead")

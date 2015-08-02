@@ -99,4 +99,5 @@ public class Ward implements Serializable {
                 ", patientList=" + patientList +
                 '}';
     }
+
 }

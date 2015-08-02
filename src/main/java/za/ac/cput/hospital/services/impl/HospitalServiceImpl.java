@@ -42,15 +42,4 @@ public class HospitalServiceImpl implements HospitalService{
         return repository.findOne(id).getDoctorList();
     }
 
-    @Override
-    public List<Patient> getPatients(Long id) {
-        List<Patient> allPatients =  new ArrayList<Patient>();
-
-        List<Ward> allWards =  repository.findOne(id).getWardList();
-        for (Ward ward : allWards) {
-            allPatients.addAll(ward.getPatientList());
-        }
-        return allPatients;
-    }
-
 }

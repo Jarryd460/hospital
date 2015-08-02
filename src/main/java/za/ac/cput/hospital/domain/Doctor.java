@@ -3,6 +3,7 @@ package za.ac.cput.hospital.domain;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,8 +27,12 @@ public class Doctor implements Serializable {
     //@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     //@JoinColumn(name="doctor_id")
     //private List<Appointment> appointmentList;
-    @OneToMany(mappedBy = "doctor", targetEntity = Appointment.class, fetch = FetchType.EAGER)
+    //@OneToMany(mappedBy = "doctor", targetEntity = Appointment.class, fetch = FetchType.EAGER)
+    //@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "doctor")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name="doctor_id")
     private List<Appointment> appointmentList;
+    //private List<Appointment> appointmentList = new ArrayList<Appointment>();
 
     private Doctor() {}
 
@@ -81,6 +86,7 @@ public class Doctor implements Serializable {
         //@JoinColumn(name="doctor_id")
         //private List<Appointment> appointmentList;
         private List<Appointment> appointmentList;
+        //private List<Appointment> appointmentList = new ArrayList<Appointment>();
 
         public Builder(Name name) {
             this.name = name;

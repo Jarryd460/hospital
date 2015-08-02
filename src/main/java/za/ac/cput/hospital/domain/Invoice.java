@@ -17,9 +17,9 @@ public class Invoice implements Serializable {
     private Long id;
     @Temporal(TemporalType.DATE)
     private Date date;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name="appointment_id")
-    private Appointment appointment;
+    //@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //@JoinColumn(name="appointment_id")
+    //private Appointment appointment;
     @NotNull
     private BigDecimal amount;
 
@@ -28,7 +28,7 @@ public class Invoice implements Serializable {
     public Invoice(Builder builder) {
         this.id = builder.id;
         this.date = builder.date;
-        this.appointment = builder.appointment;
+        //this.appointment = builder.appointment;
         this.amount = builder.amount;
     }
 
@@ -40,9 +40,9 @@ public class Invoice implements Serializable {
         return date;
     }
 
-    public Appointment getAppointment() {
-        return appointment;
-    }
+    //public Appointment getAppointment() {
+        //return appointment;
+    //}
 
     public BigDecimal getAmount() {
         return amount;
@@ -52,7 +52,7 @@ public class Invoice implements Serializable {
 
         private Long id;
         private Date date;
-        private Appointment appointment;
+        //private Appointment appointment;
         private BigDecimal amount;
 
         public Builder(BigDecimal amount) {
@@ -69,10 +69,10 @@ public class Invoice implements Serializable {
             return this;
         }
 
-        public Builder appointment(Appointment appointment) {
-            this.appointment = appointment;
-            return this;
-        }
+        //public Builder appointment(Appointment appointment) {
+            //this.appointment = appointment;
+            //return this;
+        //}
 
         public Builder amount(BigDecimal amount) {
             this.amount = amount;
@@ -82,7 +82,7 @@ public class Invoice implements Serializable {
         public Builder copy(Invoice invoice) {
             this.id = invoice.id;
             this.date = invoice.date;
-            this.appointment = invoice.appointment;
+            //this.appointment = invoice.appointment;
             this.amount = invoice.amount;
             return this;
         }
@@ -108,12 +108,12 @@ public class Invoice implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
+
     @Override
     public String toString() {
         return "Invoice{" +
                 "id=" + id +
                 ", date=" + date +
-                ", appointment=" + appointment +
                 ", amount=" + amount +
                 '}';
     }

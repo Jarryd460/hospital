@@ -7,12 +7,14 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import za.ac.cput.hospital.App;
-import za.ac.cput.hospital.conf.factory.DoctorFactory;
-import za.ac.cput.hospital.domain.Demographic;
-import za.ac.cput.hospital.domain.Doctor;
-import za.ac.cput.hospital.domain.Name;
+import za.ac.cput.hospital.conf.factory.*;
+import za.ac.cput.hospital.domain.*;
+import za.ac.cput.hospital.services.impl.DoctorServiceImpl;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by student on 2015/06/25.
@@ -29,7 +31,7 @@ public class DoctorCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         Date date = new Date();
-        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", null);
+        Doctor doctor = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
         repository.save(doctor);
         id = doctor.getId();
         Assert.assertNotNull(doctor.getId());
@@ -38,7 +40,7 @@ public class DoctorCrudTest extends AbstractTestNGSpringContextTests {
     @Test(dependsOnMethods = "testCreate")
     public void testRead() throws Exception {
         Doctor doctor = repository.findOne(id);
-        Assert.assertEquals(doctor.getName().getLastName(), "Deane");
+        Assert.assertEquals(doctor.getName().getFirstName(), "Jarryd");
     }
 
     @Test(dependsOnMethods = "testRead")

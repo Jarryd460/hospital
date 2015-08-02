@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class PatientFactory {
 
-    public static Patient createPatient(Name name, Demographic demographic, Contact contact, Address address, List<Appointment>appointmentList) {
+    public static Patient createPatient(Name name, Demographic demographic, Contact contact, Address address, List<Appointment> appointmentList) {
         return new Patient.Builder(name).demographic(demographic).contact(contact).address(address).appointmentList(appointmentList).build();
     }
 

@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class DoctorFactory {
 
-    public static Doctor createDoctor(Name name, Demographic demographic, Contact contact, Address address, String specialization, List<Appointment> appointmentList) {
-        return new Doctor.Builder(name).demographic(demographic).contact(contact).address(address).specialization(specialization).appointmentList(appointmentList).build();
+    public static Doctor createDoctor(Name name, Demographic demographic, Contact contact, Address address, String specialization, List<Appointment> appointmentList, Login login) {
+        return new Doctor.Builder(name).demographic(demographic).contact(contact).address(address).specialization(specialization).appointmentList(appointmentList).login(login).build();
     }
 
 }

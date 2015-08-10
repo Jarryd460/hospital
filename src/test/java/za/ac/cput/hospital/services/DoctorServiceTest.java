@@ -42,7 +42,7 @@ public class DoctorServiceTest extends AbstractTestNGSpringContextTests {
         List<Appointment> appointmentList = new ArrayList<Appointment>();
         appointmentList.add(appointment1);
         appointmentList.add(appointment2);
-        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", appointmentList);
+        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", appointmentList, null);
         repository.save(doctor);
         id=doctor.getId();
         Assert.assertNotNull(doctor.getId());

@@ -17,9 +17,9 @@ public class DoctorResource extends ResourceSupport{
     private Contact contact;
     private Address address;
     private String specialization;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name="doctor_id")
     private List<Appointment> appointmentList;
+    private Login login;
+
 
     private DoctorResource() {}
 
@@ -61,6 +61,10 @@ public class DoctorResource extends ResourceSupport{
         return appointmentList;
     }
 
+    public Login getLogin() {
+        return login;
+    }
+
     public static class Builder {
 
         private Long resid;
@@ -70,6 +74,7 @@ public class DoctorResource extends ResourceSupport{
         private Address address;
         private String specialization;
         private List<Appointment> appointmentList;
+        private Login login;
 
         public Builder(Name name) {
             this.name = name;
@@ -110,6 +115,11 @@ public class DoctorResource extends ResourceSupport{
             return this;
         }
 
+        public Builder login(Login login) {
+            this.login = login;
+            return this;
+        }
+
         public Builder copy(DoctorResource doctor) {
             this.resid = doctor.resid;
             this.name = doctor.name;
@@ -118,6 +128,7 @@ public class DoctorResource extends ResourceSupport{
             this.contact = doctor.contact;
             this.specialization = doctor.specialization;
             this.appointmentList = doctor.appointmentList;
+            this.login = doctor.login;
             return this;
         }
 

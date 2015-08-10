@@ -45,8 +45,8 @@ public class HospitalServiceTest extends AbstractTestNGSpringContextTests {
         wardList.add(ward1);
         wardList.add(ward2);
         wardList.add(ward3);
-        Doctor doctor1 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
-        Doctor doctor2 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
+        Doctor doctor1 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null, null);
+        Doctor doctor2 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null, null);
         List<Doctor> doctorList = new ArrayList<Doctor>();
         doctorList.add(doctor1);
         doctorList.add(doctor2);

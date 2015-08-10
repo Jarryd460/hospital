@@ -15,6 +15,7 @@ import org.junit.runners.Suite;
         DoctorTest.class,
         HospitalTest.class,
         InvoiceTest.class,
+        LoginTest.class,
         NameTest.class,
         PatientTest.class,
         WardTest.class

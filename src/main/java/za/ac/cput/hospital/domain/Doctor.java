@@ -33,6 +33,8 @@ public class Doctor implements Serializable {
     @JoinColumn(name="doctor_id")
     private List<Appointment> appointmentList;
     //private List<Appointment> appointmentList = new ArrayList<Appointment>();
+    @Embedded
+    private Login login;
 
     private Doctor() {}
 
@@ -44,6 +46,7 @@ public class Doctor implements Serializable {
         this.address = builder.address;
         this.specialization = builder.specialization;
         this.appointmentList = builder.appointmentList;
+        this.login = builder.login;
     }
 
     public Long getId() {
@@ -74,6 +77,10 @@ public class Doctor implements Serializable {
         return appointmentList;
     }
 
+    public Login getLogin() {
+        return login;
+    }
+
     public static class Builder {
 
         private Long id;
@@ -87,6 +94,7 @@ public class Doctor implements Serializable {
         //private List<Appointment> appointmentList;
         private List<Appointment> appointmentList;
         //private List<Appointment> appointmentList = new ArrayList<Appointment>();
+        private Login login;
 
         public Builder(Name name) {
             this.name = name;
@@ -127,6 +135,11 @@ public class Doctor implements Serializable {
             return this;
         }
 
+        public Builder login(Login login) {
+            this.login = login;
+            return this;
+        }
+
         public Builder copy(Doctor doctor) {
             this.id = doctor.id;
             this.name = doctor.name;
@@ -135,6 +148,7 @@ public class Doctor implements Serializable {
             this.contact = doctor.contact;
             this.specialization = doctor.specialization;
             this.appointmentList = doctor.appointmentList;
+            this.login = doctor.login;
             return this;
         }
 
@@ -170,6 +184,7 @@ public class Doctor implements Serializable {
                 ", address=" + address +
                 ", specialization='" + specialization + '\'' +
                 ", appointmentList=" + appointmentList +
+                ", login=" + login +
                 '}';
     }
 

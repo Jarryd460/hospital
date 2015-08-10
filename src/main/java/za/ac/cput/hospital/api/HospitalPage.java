@@ -36,6 +36,7 @@ public class HospitalPage {
                     .address(hospital.getAddress())
                     .wardList(hospital.getWardList())
                     .doctorList(hospital.getDoctorList())
+                    .resid(hospital.getId())
                     .build();
             Link hospitalsLink = new
                     Link("http://localhost:8080/hospital/"+res.getResId().toString())

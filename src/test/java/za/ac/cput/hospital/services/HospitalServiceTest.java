@@ -39,11 +39,17 @@ public class HospitalServiceTest extends AbstractTestNGSpringContextTests {
         //patientList.add(patient1);
         //patientList.add(patient2);
         Ward ward1 = WardFactory.createWard(20, patientList);
+        Ward ward2 = WardFactory.createWard(15, null);
+        Ward ward3 = WardFactory.createWard(10, null);
         List<Ward> wardList = new ArrayList<Ward>();
         wardList.add(ward1);
-        Doctor doctor = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
+        wardList.add(ward2);
+        wardList.add(ward3);
+        Doctor doctor1 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
+        Doctor doctor2 = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null);
         List<Doctor> doctorList = new ArrayList<Doctor>();
-        doctorList.add(doctor);
+        doctorList.add(doctor1);
+        doctorList.add(doctor2);
         Hospital hospital1 = HospitalFactory.createHospital("Hospital1", "0219753575", new Address.Builder("21 Street").build(), wardList, doctorList);
         repository.save(hospital1);
         id=hospital1.getId();
@@ -59,14 +65,14 @@ public class HospitalServiceTest extends AbstractTestNGSpringContextTests {
     @Test(dependsOnMethods = "testGetHospitals")
     public void testGetWards() throws Exception {
         List<Ward> wardList = service.getWards(id);
-        Assert.assertEquals(wardList.size(), 1);
+        Assert.assertEquals(wardList.size(), 3);
     }
 
 
     @Test
     public void testGetDoctors() throws Exception {
         List<Doctor> doctorList = service.getDoctors(id);
-        Assert.assertEquals(doctorList.size(), 1);
+        Assert.assertEquals(doctorList.size(), 2);
     }
 
 }

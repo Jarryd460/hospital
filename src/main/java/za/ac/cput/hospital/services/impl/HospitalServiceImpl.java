@@ -34,12 +34,32 @@ public class HospitalServiceImpl implements HospitalService{
 
     @Override
     public List<Ward> getWards(Long id) {
-        return repository.findOne(id).getWardList();
+        //return repository.findOne(id).getWardList();
+        List<Ward> wardList = new ArrayList<Ward>();
+        List<Ward> wards = repository.findOne(id).getWardList();
+
+        for (Ward ward : wards) {
+            if(!wardList.contains(ward)) {
+                wardList.add(ward);
+            }
+        }
+
+        return wardList;
     }
 
     @Override
     public List<Doctor> getDoctors(Long id) {
-        return repository.findOne(id).getDoctorList();
+        //return repository.findOne(id).getDoctorList();
+        List<Doctor> doctorList = new ArrayList<Doctor>();
+        List<Doctor> doctors = repository.findOne(id).getDoctorList();
+
+        for (Doctor doctor : doctors) {
+            if(!doctorList.contains(doctor)) {
+                doctorList.add(doctor);
+            }
+        }
+
+        return doctorList;
     }
 
 }

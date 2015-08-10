@@ -30,6 +30,7 @@ public class InvoicePage {
             InvoiceResource res = new InvoiceResource
                     .Builder(invoice.getAmount())
                     .date(invoice.getDate())
+                    .resid(invoice.getId())
                     .build();
             Link invoicesLink = new
                     Link("http://localhost:8080/invoice/"+res.getResId().toString())

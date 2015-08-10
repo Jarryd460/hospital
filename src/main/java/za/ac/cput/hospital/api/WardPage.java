@@ -32,6 +32,7 @@ public class WardPage {
             WardResource res = new WardResource
                     .Builder(ward.getCapacity())
                     .patientList(ward.getPatientList())
+                    .resid(ward.getId())
                     .build();
             Link wardsLink = new
                     Link("http://localhost:8080/ward/"+res.getResId().toString())

@@ -34,6 +34,7 @@ public class AppointmentPage {
                     .description(appointment.getDescription())
                     .amount(appointment.getAmount())
                     .invoiceList(appointment.getInvoiceList())
+                    .resid(appointment.getId())
                     .build();
             Link appointmentsLink = new
                     Link("http://localhost:8080/appointment/"+res.getResId().toString())

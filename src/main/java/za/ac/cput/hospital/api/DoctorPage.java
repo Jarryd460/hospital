@@ -36,6 +36,7 @@ public class DoctorPage {
                     .address(doctor.getAddress())
                     .specialization(doctor.getSpecialization())
                     .appointmentList(doctor.getAppointmentList())
+                    .resid(doctor.getId())
                     .build();
             Link doctorsLink = new
                     Link("http://localhost:8080/doctor/"+res.getResId().toString())

@@ -45,16 +45,46 @@ public class PatientServiceTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(patient.getId());
     }
 
-    @Test
+    @Test(dependsOnMethods = "create")
+    public void testGetPatient() throws Exception {
+        Patient patient = service.getPatient(id);
+        Assert.assertNotNull(patient.getId());
+    }
+
+    @Test(dependsOnMethods = "testGetPatient")
     public void testGetPatients() throws Exception {
         List<Patient> patientList = service.getPatients();
         Assert.assertEquals(patientList.size(), 1);
     }
 
-    @Test
+    @Test(dependsOnMethods = "testGetPatients")
     public void testGetAppointments() throws Exception {
         List<Appointment> appointmentList = service.getAppointments(id);
         Assert.assertEquals(appointmentList.size(), 2);
+    }
+
+    @Test(dependsOnMethods = "testGetAppointments")
+    public void testCreatPatient() throws Exception {
+        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(null).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, null);
+        service.create(patient);
+        Assert.assertNotNull(patient.getId());
+    }
+
+    @Test(dependsOnMethods = "testCreatPatient")
+    public void testEditInvoice() throws Exception {
+        Patient patient = repository.findOne(id);
+        Patient updatedPatient = new Patient.Builder(patient.getName()).copy(patient).demographic(patient.getDemographic()).contact(patient.getContact()).address(patient.getAddress()).appointmentList(patient.getAppointmentList()).build();
+        service.edit(updatedPatient);
+        Patient newPatient = repository.findOne(id);
+        Assert.assertNotNull(newPatient.getId());
+    }
+
+    @Test(dependsOnMethods = "testEditInvoice")
+    public void testDeleteInvoice() throws Exception {
+        Patient patient = repository.findOne(id);
+        service.delete(patient);
+        Patient newPatient = repository.findOne(id);
+        Assert.assertNull(newPatient);
     }
 
 }

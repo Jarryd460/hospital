@@ -19,6 +19,11 @@ public class InvoiceServiceImpl implements InvoiceService{
     InvoiceRepository repository;
 
     @Override
+    public Invoice getInvoice(Long id) {
+        return repository.findOne(id);
+    }
+
+    @Override
     public List<Invoice> getInvoices() {
         List<Invoice> allInvoices = new ArrayList<Invoice>();
 
@@ -27,6 +32,22 @@ public class InvoiceServiceImpl implements InvoiceService{
             allInvoices.add(invoice);
         }
         return allInvoices;
+    }
+
+    @Override
+    public void create(Invoice invoice) {
+        repository.save(invoice);
+    }
+
+    @Override
+    public void edit(Invoice invoice) {
+        Invoice updatedInvoice = new Invoice.Builder(invoice.getAmount()).copy(invoice).date(invoice.getDate()).build();
+        repository.save(updatedInvoice);
+    }
+
+    @Override
+    public void delete(Invoice invoice) {
+        repository.delete(invoice);
     }
 
 }

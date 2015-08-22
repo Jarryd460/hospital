@@ -11,8 +11,16 @@ import java.util.List;
  */
 public interface PatientService {
 
+    Patient getPatient(Long id);
+
     List<Patient> getPatients();
 
     List<Appointment> getAppointments(Long id);
+
+    void create(Patient patient);
+
+    void edit(Patient patient);
+
+    void delete(Patient patient);
 
 }

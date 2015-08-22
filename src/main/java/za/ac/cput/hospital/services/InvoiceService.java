@@ -9,6 +9,14 @@ import java.util.List;
  */
 public interface InvoiceService {
 
+    Invoice getInvoice(Long id);
+
     List<Invoice> getInvoices();
+
+    void create(Invoice invoice);
+
+    void edit(Invoice invoice);
+
+    void delete(Invoice invoice);
 
 }

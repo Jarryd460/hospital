@@ -39,10 +39,40 @@ public class InvoiceServiceTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(invoice1.getId());
     }
 
-    @Test
+    @Test(dependsOnMethods = "create")
+    public void testGetInvoice() throws Exception {
+        Invoice invoice = service.getInvoice(id);
+        Assert.assertNotNull(invoice.getId());
+    }
+
+    @Test(dependsOnMethods = "testGetInvoice")
     public void testGetInvoices() throws Exception {
         List<Invoice> invoiceList = service.getInvoices();
         Assert.assertEquals(invoiceList.size(), 2);
+    }
+
+    @Test(dependsOnMethods = "testGetInvoices")
+    public void testCreateInvoice() throws Exception {
+        Invoice invoice = InvoiceFactory.createInvoice(new Date(), new BigDecimal(20000));
+        service.create(invoice);
+        Assert.assertNotNull(invoice.getId());
+    }
+
+    @Test(dependsOnMethods = "testCreateInvoice")
+    public void testEditInvoice() throws Exception {
+        Invoice invoice = repository.findOne(id);
+        Invoice updatedInvoice = new Invoice.Builder(invoice.getAmount()).copy(invoice).amount(new BigDecimal(20)).build();
+        service.edit(updatedInvoice);
+        Invoice newInvoice = repository.findOne(id);
+        Assert.assertNotNull(newInvoice.getId());
+    }
+
+    @Test(dependsOnMethods = "testEditInvoice")
+    public void testDeleteInvoice() throws Exception {
+        Invoice invoice = repository.findOne(id);
+        service.delete(invoice);
+        Invoice newInvoice = repository.findOne(id);
+        Assert.assertNull(newInvoice);
     }
 
 }

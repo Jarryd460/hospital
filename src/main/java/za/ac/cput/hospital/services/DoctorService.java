@@ -10,8 +10,16 @@ import java.util.List;
  */
 public interface DoctorService {
 
+    Doctor getDoctor(Long id);
+
     List<Doctor> getDoctors();
 
     List<Appointment> getAppointments(Long id);
+
+    void create(Doctor doctor);
+
+    void edit(Doctor doctor);
+
+    void delete(Doctor doctor);
 
 }

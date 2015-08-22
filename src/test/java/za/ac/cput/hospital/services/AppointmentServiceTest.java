@@ -15,6 +15,7 @@ import za.ac.cput.hospital.domain.Patient;
 import za.ac.cput.hospital.repository.AppointmentRepository;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -49,16 +50,47 @@ public class AppointmentServiceTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(appointment1.getId());
     }
 
-    @Test
+    @Test(dependsOnMethods = "create")
+    public void testGetAppointment() throws Exception {
+        Appointment appointment = service.getAppointment(id);
+        Assert.assertEquals(appointment.getDescription(), "Checkup");
+    }
+
+    @Test(dependsOnMethods = "testGetAppointment")
     public void testGetAppointments() throws Exception {
         List<Appointment> appointmentList = service.getAppointments();
         Assert.assertEquals(appointmentList.size(), 2);
     }
 
-    @Test
+    @Test(dependsOnMethods = "testGetAppointments")
     public void testGetInvoices() throws Exception {
         List<Invoice> invoiceList = service.getInvoices(id);
         Assert.assertEquals(invoiceList.size(), 1);
+    }
+
+    @Test(dependsOnMethods = "testGetInvoices")
+    public void testCreateAppointment() throws Exception {
+        Appointment appointment = AppointmentFactory.createAppointment(new Date(),"Checkup", new BigDecimal(10000), null);
+        service.create(appointment);
+        Assert.assertNotNull(appointment.getId());
+   }
+
+    @Test(dependsOnMethods = "testCreateAppointment")
+    public void testEditAppointment() throws Exception {
+        Appointment appointment = repository.findOne(id);
+        Appointment updatedAppointment = new Appointment.Builder(appointment.getDate()).copy(appointment).amount(new BigDecimal(10)).build();
+        service.edit(updatedAppointment);
+        Appointment newAppointment = repository.findOne(id);
+        DecimalFormat df = new DecimalFormat("#.00");
+        Assert.assertEquals(df.format(newAppointment.getAmount()), df.format(10));
+    }
+
+    @Test(dependsOnMethods = "testEditAppointment")
+    public void testDeleteAppointment() throws Exception {
+        Appointment appointment = repository.findOne(id);
+        service.delete(appointment);
+        Appointment newAppointment = repository.findOne(id);
+        Assert.assertNull(newAppointment);
     }
 
 }

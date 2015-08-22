@@ -66,17 +66,8 @@
       <column name="race" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="ward_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_hqumru5220jt24q9kxfc8x0h3" columns="ward_id" ref-table="ward" ref-schema="" ref-catalog="hospital" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="FK_reredi3x00py8huq44bik8bkv" table="appointment" schema="" catalog="hospital" columns="patient_id"/>
-      <index name="FK_hqumru5220jt24q9kxfc8x0h3" unique="false" columns="ward_id"/>
-    </table>
-    <table name="ward" schema="" catalog="hospital" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="capacity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_hqumru5220jt24q9kxfc8x0h3" table="patient" schema="" catalog="hospital" columns="ward_id"/>
     </table>
   </data-source>
 </component>

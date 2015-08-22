@@ -10,8 +10,16 @@ import java.util.List;
  */
 public interface AppointmentService {
 
+    Appointment getAppointment(Long id);
+
     List<Appointment> getAppointments();
 
     List<Invoice> getInvoices(Long id);
+
+    void create(Appointment appointment);
+
+    void edit(Appointment appointment);
+
+    void delete(Appointment appointment);
 
 }

@@ -48,16 +48,46 @@ public class DoctorServiceTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(doctor.getId());
     }
 
-    @Test
+    @Test(dependsOnMethods = "create")
+    public void testGetDoctor() throws Exception {
+        Doctor doctor = service.getDoctor(id);
+        Assert.assertEquals(doctor.getName().getLastName(), "Deane");
+    }
+
+    @Test(dependsOnMethods = "testGetDoctor")
     public void testGetDoctors() throws Exception {
         List<Doctor> doctorList = service.getDoctors();
         Assert.assertEquals(doctorList.size(), 1);
     }
 
-    @Test
+    @Test(dependsOnMethods = "testGetDoctors")
     public void testGetAppointments() throws Exception {
         List<Appointment> appointmentList = service.getAppointments(id);
         Assert.assertEquals(appointmentList.size(), 2);
+    }
+
+    @Test(dependsOnMethods = "testGetAppointments")
+    public void testCreateDoctor() throws Exception {
+        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(null).build(), null, null, "Surgeon", null, null);
+        service.create(doctor);
+        Assert.assertNotNull(doctor.getId());
+    }
+
+    @Test(dependsOnMethods = "testCreateDoctor")
+    public void testEditDoctor() throws Exception {
+        Doctor doctor = repository.findOne(id);
+        Doctor updatedDoctor = new Doctor.Builder(doctor.getName()).copy(doctor).specialization("Unknown").build();
+        service.edit(updatedDoctor);
+        Doctor newDoctor = repository.findOne(id);
+        Assert.assertEquals(newDoctor.getSpecialization(), "Unknown");
+    }
+
+    @Test(dependsOnMethods = "testEditDoctor")
+    public void testDeleteDoctor() throws Exception {
+        Doctor doctor = repository.findOne(id);
+        service.delete(doctor);
+        Doctor newDoctor = repository.findOne(id);
+        Assert.assertNull(newDoctor);
     }
 
 }

@@ -20,6 +20,11 @@ public class AppointmentServiceImpl implements AppointmentService {
     AppointmentRepository repository;
 
     @Override
+    public Appointment getAppointment(Long id) {
+        return repository.findOne(id);
+    }
+
+    @Override
     public List<Appointment> getAppointments() {
         List<Appointment> allAppointments = new ArrayList<Appointment>();
 
@@ -33,6 +38,22 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public List<Invoice> getInvoices(Long id) {
         return repository.findOne(id).getInvoiceList();
+    }
+
+    @Override
+    public void create(Appointment appointment) {
+        repository.save(appointment);
+    }
+
+    @Override
+    public void edit(Appointment appointment) {
+        Appointment updateAppointment = new Appointment.Builder(appointment.getDate()).copy(appointment).description(appointment.getDescription()).amount(appointment.getAmount()).invoiceList(appointment.getInvoiceList()).build();
+        repository.save(updateAppointment);
+    }
+
+    @Override
+    public void delete(Appointment appointment) {
+        repository.delete(appointment.getId());
     }
 
 }

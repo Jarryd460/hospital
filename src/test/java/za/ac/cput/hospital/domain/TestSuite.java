@@ -16,8 +16,7 @@ import org.junit.runners.Suite;
         InvoiceTest.class,
         LoginTest.class,
         NameTest.class,
-        PatientTest.class,
-        WardTest.class
+        PatientTest.class
 })
 public class TestSuite {
 }

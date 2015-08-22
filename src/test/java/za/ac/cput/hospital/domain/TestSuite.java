@@ -13,7 +13,6 @@ import org.junit.runners.Suite;
         ContactTest.class,
         DemographicTest.class,
         DoctorTest.class,
-        HospitalTest.class,
         InvoiceTest.class,
         LoginTest.class,
         NameTest.class,

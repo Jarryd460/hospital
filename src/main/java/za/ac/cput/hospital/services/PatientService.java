@@ -9,18 +9,8 @@ import java.util.List;
 /**
  * Created by student on 2015/06/25.
  */
-public interface PatientService {
-
-    Patient getPatient(Long id);
-
-    List<Patient> getPatients();
+public interface PatientService extends Services<Patient, Long>{
 
     List<Appointment> getAppointments(Long id);
-
-    void create(Patient patient);
-
-    void edit(Patient patient);
-
-    void delete(Patient patient);
 
 }

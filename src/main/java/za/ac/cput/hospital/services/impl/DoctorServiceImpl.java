@@ -20,12 +20,12 @@ public class DoctorServiceImpl implements DoctorService{
     DoctorRepository repository;
 
     @Override
-    public Doctor getDoctor(Long id) {
+    public Doctor findById(Long id) {
         return repository.findOne(id);
     }
 
     @Override
-    public List<Doctor> getDoctors() {
+    public List<Doctor> findAll() {
         List<Doctor> allDoctors = new ArrayList<Doctor>();
 
         Iterable<Doctor> doctors = repository.findAll();
@@ -41,14 +41,13 @@ public class DoctorServiceImpl implements DoctorService{
     }
 
     @Override
-    public void create(Doctor doctor) {
-        repository.save(doctor);
+    public Doctor create(Doctor doctor) {
+        return repository.save(doctor);
     }
 
     @Override
-    public void edit(Doctor doctor) {
-        Doctor updatedDoctor = new Doctor.Builder(doctor.getName()).copy(doctor).demographic(doctor.getDemographic()).contact(doctor.getContact()).address(doctor.getAddress()).specialization(doctor.getSpecialization()).appointmentList(doctor.getAppointmentList()).login(doctor.getLogin()).build();
-        repository.save(updatedDoctor);
+    public Doctor edit(Doctor doctor) {
+        return repository.save(doctor);
     }
 
     @Override

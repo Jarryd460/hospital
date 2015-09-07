@@ -50,13 +50,13 @@ public class DoctorServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test(dependsOnMethods = "create")
     public void testGetDoctor() throws Exception {
-        Doctor doctor = service.getDoctor(id);
+        Doctor doctor = service.findById(id);
         Assert.assertEquals(doctor.getName().getLastName(), "Deane");
     }
 
     @Test(dependsOnMethods = "testGetDoctor")
     public void testGetDoctors() throws Exception {
-        List<Doctor> doctorList = service.getDoctors();
+        List<Doctor> doctorList = service.findAll();
         Assert.assertEquals(doctorList.size(), 1);
     }
 
@@ -67,13 +67,6 @@ public class DoctorServiceTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test(dependsOnMethods = "testGetAppointments")
-    public void testCreateDoctor() throws Exception {
-        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(null).build(), null, null, "Surgeon", null, null);
-        service.create(doctor);
-        Assert.assertNotNull(doctor.getId());
-    }
-
-    @Test(dependsOnMethods = "testCreateDoctor")
     public void testEditDoctor() throws Exception {
         Doctor doctor = repository.findOne(id);
         Doctor updatedDoctor = new Doctor.Builder(doctor.getName()).copy(doctor).specialization("Unknown").build();

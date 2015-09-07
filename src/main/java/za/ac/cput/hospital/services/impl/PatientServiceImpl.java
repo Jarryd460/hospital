@@ -21,12 +21,12 @@ public class PatientServiceImpl implements PatientService{
     PatientRepository repository;
 
     @Override
-    public Patient getPatient(Long id) {
+    public Patient findById(Long id) {
         return repository.findOne(id);
     }
 
     @Override
-    public List<Patient> getPatients() {
+    public List<Patient> findAll() {
         List<Patient> allPatients = new ArrayList<Patient>();
 
         Iterable<Patient> patients = repository.findAll();
@@ -42,14 +42,13 @@ public class PatientServiceImpl implements PatientService{
     }
 
     @Override
-    public void create(Patient patient) {
-        repository.save(patient);
+    public Patient create(Patient patient) {
+        return repository.save(patient);
     }
 
     @Override
-    public void edit(Patient patient) {
-        Patient updatedPatient = new Patient.Builder(patient.getName()).copy(patient).demographic(patient.getDemographic()).contact(patient.getContact()).address(patient.getAddress()).appointmentList(patient.getAppointmentList()).build();
-        repository.save(updatedPatient);
+    public Patient edit(Patient patient) {
+        return repository.save(patient);
     }
 
     @Override

@@ -47,13 +47,13 @@ public class PatientServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test(dependsOnMethods = "create")
     public void testGetPatient() throws Exception {
-        Patient patient = service.getPatient(id);
+        Patient patient = service.findById(id);
         Assert.assertNotNull(patient.getId());
     }
 
     @Test(dependsOnMethods = "testGetPatient")
     public void testGetPatients() throws Exception {
-        List<Patient> patientList = service.getPatients();
+        List<Patient> patientList = service.findAll();
         Assert.assertEquals(patientList.size(), 1);
     }
 
@@ -64,19 +64,12 @@ public class PatientServiceTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test(dependsOnMethods = "testGetAppointments")
-    public void testCreatPatient() throws Exception {
-        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(null).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, null);
-        service.create(patient);
-        Assert.assertNotNull(patient.getId());
-    }
-
-    @Test(dependsOnMethods = "testCreatPatient")
     public void testEditInvoice() throws Exception {
         Patient patient = repository.findOne(id);
         Patient updatedPatient = new Patient.Builder(patient.getName()).copy(patient).demographic(patient.getDemographic()).contact(patient.getContact()).address(patient.getAddress()).appointmentList(patient.getAppointmentList()).build();
         service.edit(updatedPatient);
         Patient newPatient = repository.findOne(id);
-        Assert.assertNotNull(newPatient.getId());
+        Assert.assertEquals(newPatient.getName().getLastName(), "Deane");
     }
 
     @Test(dependsOnMethods = "testEditInvoice")

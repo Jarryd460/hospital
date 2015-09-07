@@ -36,30 +36,26 @@ public class AppointmentServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
         repository.deleteAll();
-        Invoice invoice1 = InvoiceFactory.createInvoice(new Date(), new BigDecimal(20000));
-        Invoice invoice2 = InvoiceFactory.createInvoice(new Date(), new BigDecimal(40000));
-        List<Invoice> invoiceList1 = new ArrayList<Invoice>();
-        invoiceList1.add(invoice1);
-        List<Invoice> invoiceList2 = new ArrayList<Invoice>();
-        invoiceList2.add(invoice2);
-        Appointment appointment1 = AppointmentFactory.createAppointment(new Date(),"Checkup", new BigDecimal(10000), invoiceList1);
-        Appointment appointment2 = AppointmentFactory.createAppointment(new Date(), "Heart transplant", new BigDecimal(250000), invoiceList2);
-        repository.save(appointment1);
-        repository.save(appointment2);
-        id=appointment1.getId();
-        Assert.assertNotNull(appointment1.getId());
+        Invoice invoice = InvoiceFactory.createInvoice(new Date(), new BigDecimal(20000));
+        List<Invoice> invoiceList = new ArrayList<Invoice>();
+        invoiceList.add(invoice);
+        Appointment appointment = AppointmentFactory
+                .createAppointment(new Date(), "Checkup", new BigDecimal(10000), invoiceList);
+        service.create(appointment);
+        id = appointment.getId();
+        Assert.assertNotNull(appointment);
     }
 
     @Test(dependsOnMethods = "create")
     public void testGetAppointment() throws Exception {
-        Appointment appointment = service.getAppointment(id);
+        Appointment appointment = service.findById(id);
         Assert.assertEquals(appointment.getDescription(), "Checkup");
     }
 
     @Test(dependsOnMethods = "testGetAppointment")
     public void testGetAppointments() throws Exception {
-        List<Appointment> appointmentList = service.getAppointments();
-        Assert.assertEquals(appointmentList.size(), 2);
+        List<Appointment> appointmentList = service.findAll();
+        Assert.assertEquals(appointmentList.size(), 1);
     }
 
     @Test(dependsOnMethods = "testGetAppointments")
@@ -69,13 +65,6 @@ public class AppointmentServiceTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test(dependsOnMethods = "testGetInvoices")
-    public void testCreateAppointment() throws Exception {
-        Appointment appointment = AppointmentFactory.createAppointment(new Date(),"Checkup", new BigDecimal(10000), null);
-        service.create(appointment);
-        Assert.assertNotNull(appointment.getId());
-   }
-
-    @Test(dependsOnMethods = "testCreateAppointment")
     public void testEditAppointment() throws Exception {
         Appointment appointment = repository.findOne(id);
         Appointment updatedAppointment = new Appointment.Builder(appointment.getDate()).copy(appointment).amount(new BigDecimal(10)).build();

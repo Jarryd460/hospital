@@ -8,18 +8,8 @@ import java.util.List;
 /**
  * Created by student on 2015/06/25.
  */
-public interface DoctorService {
-
-    Doctor getDoctor(Long id);
-
-    List<Doctor> getDoctors();
+public interface DoctorService extends Services<Doctor, Long>{
 
     List<Appointment> getAppointments(Long id);
-
-    void create(Doctor doctor);
-
-    void edit(Doctor doctor);
-
-    void delete(Doctor doctor);
 
 }

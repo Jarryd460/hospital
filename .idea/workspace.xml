@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c08a2a83-6c63-4466-ab90-120b10c5ffdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/Services.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/Services.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/AppointmentPage.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/AppointmentPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/AppointmentService.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/AppointmentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/AppointmentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/AppointmentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/AppointmentServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/AppointmentServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/DoctorPage.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/DoctorPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/DoctorService.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/DoctorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/DoctorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/DoctorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/DoctorServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/DoctorServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/InvoicePage.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/InvoicePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/InvoiceService.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/InvoiceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/InvoiceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/InvoiceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/InvoiceServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/InvoiceServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/PatientPage.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/api/PatientPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/PatientService.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/PatientService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/PatientServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/hospital/services/impl/PatientServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/PatientServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/hospital/services/PatientServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/AppointmentPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/AppointmentPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/AppointmentService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/AppointmentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/AppointmentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/AppointmentServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/AppointmentServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/AppointmentServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/DoctorPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/DoctorPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/DoctorService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/DoctorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/DoctorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/DoctorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/DoctorServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/DoctorServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/InvoicePage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/InvoicePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/InvoiceService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/InvoiceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/InvoiceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/InvoiceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/InvoiceServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/InvoiceServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/PatientPage.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/api/PatientPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/PatientService.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/PatientService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/PatientServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/hospital/services/impl/PatientServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/PatientServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/hospital/services/PatientServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="c08a2a83-6c63-4466-ab90-120b10c5ffdb" name="Default" comment="" />
     <ignored path="hospital.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -230,18 +194,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -258,62 +210,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hospital" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,12 +710,12 @@
       <workItem from="1440267932921" duration="7113000" />
       <workItem from="1441439297876" duration="4091000" />
       <workItem from="1441616410862" duration="6353000" />
-      <workItem from="1441623384248" duration="135000" />
+      <workItem from="1441623384248" duration="293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117780000" />
+    <option name="totallyTimeSpent" value="117938000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">

@@ -37,6 +37,7 @@ public class AppointmentCrudTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testCreate() throws Exception {
+        repository.deleteAll();
         Date date = new Date();
         //Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", null);
         //Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(date).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null);

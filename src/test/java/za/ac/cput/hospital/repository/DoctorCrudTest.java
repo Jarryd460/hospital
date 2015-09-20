@@ -30,6 +30,7 @@ public class DoctorCrudTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testCreate() throws Exception {
+        repository.deleteAll();
         Date date = new Date();
         Doctor doctor = DoctorFactory.createDoctor(NameFactory.createName("Jarryd", "Deane"), DemographicFactory.createDemographic(null, null, date), ContactFactory.createContact("0213937854", "0823451234", "0760984567"), AddressFactory.createAddress("21 Street", "Western Cape", "Cape Town", "South Africa", "7798"), "Surgeon", null, null);
         repository.save(doctor);

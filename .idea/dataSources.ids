@@ -10,7 +10,7 @@
     <table name="appointment" schema="" catalog="hospital" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="amount" sqlType="DECIMAL" precision="19" scale="2" nullable="false" jdbcType="3"/>
-      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="date" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="doctor_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="patient_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -31,7 +31,7 @@
       <column name="alternative_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="home_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="mobile_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="date_of_birth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="date_of_birth" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="gender" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="race" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -45,7 +45,7 @@
     <table name="invoice" schema="" catalog="hospital" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="amount" sqlType="DECIMAL" precision="19" scale="2" nullable="false" jdbcType="3"/>
-      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="date" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="appointment_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_sij7yenf2dlvvxb2d32x12ijc" columns="appointment_id" ref-table="appointment" ref-schema="" ref-catalog="hospital" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
@@ -61,7 +61,7 @@
       <column name="alternative_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="home_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="mobile_phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="date_of_birth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="date_of_birth" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="gender" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="race" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>

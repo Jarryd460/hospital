@@ -36,11 +36,11 @@ public class AppointmentServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
         repository.deleteAll();
-        Invoice invoice = InvoiceFactory.createInvoice(new Date(), new BigDecimal(20000));
+        Invoice invoice = InvoiceFactory.createInvoice("04-29-1992", new BigDecimal(20000));
         List<Invoice> invoiceList = new ArrayList<Invoice>();
         invoiceList.add(invoice);
         Appointment appointment = AppointmentFactory
-                .createAppointment(new Date(), "Checkup", new BigDecimal(10000), invoiceList);
+                .createAppointment("04-29-1992", "Checkup", new BigDecimal(10000), invoiceList);
         service.create(appointment);
         id = appointment.getId();
         Assert.assertNotNull(appointment);

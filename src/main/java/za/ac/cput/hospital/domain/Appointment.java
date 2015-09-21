@@ -17,8 +17,7 @@ public class Appointment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    private String date;
     //@ManyToOne(fetch = FetchType.EAGER)
     //@JoinColumn(name="patient_id")
     //private Patient patient;
@@ -52,7 +51,7 @@ public class Appointment implements Serializable {
         return id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -79,7 +78,7 @@ public class Appointment implements Serializable {
     public static class Builder {
 
         private Long id;
-        private Date date;
+        private String date;
         //private Patient patient;
         //private Doctor doctor;
         private String description;
@@ -89,7 +88,7 @@ public class Appointment implements Serializable {
         //private List<Invoice> invoiceList;
         private List<Invoice> invoiceList;
 
-        public Builder(Date date) {
+        public Builder(String date) {
             this.date = date;
         }
 
@@ -102,7 +101,7 @@ public class Appointment implements Serializable {
             return this;
         }
 
-        public Builder date(Date date) {
+        public Builder date(String date) {
             this.date = date;
             return this;
         }

@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class AppointmentFactory {
 
-    public static Appointment createAppointment(Date date, String description, BigDecimal amount, List<Invoice> invoiceList) {
+    public static Appointment createAppointment(String date, String description, BigDecimal amount, List<Invoice> invoiceList) {
         return new Appointment.Builder(date).description(description).amount(amount).invoiceList(invoiceList).build();
     }
 

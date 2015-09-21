@@ -15,8 +15,7 @@ public class Invoice implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    private String date;
     //@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     //@JoinColumn(name="appointment_id")
     //private Appointment appointment;
@@ -36,7 +35,7 @@ public class Invoice implements Serializable {
         return id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -51,7 +50,7 @@ public class Invoice implements Serializable {
     public static class Builder {
 
         private Long id;
-        private Date date;
+        private String date;
         //private Appointment appointment;
         private BigDecimal amount;
 
@@ -64,7 +63,7 @@ public class Invoice implements Serializable {
             return this;
         }
 
-        public Builder date(Date date) {
+        public Builder date(String date) {
             this.date = date;
             return this;
         }

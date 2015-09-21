@@ -13,20 +13,18 @@ public class DoctorTest {
 
     @Test
     public void testCreate() {
-        Date date = new Date();
-        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", null, null);
+        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder("04-29-1992").build(), null, null, "Surgeon", null, null);
         Assert.assertEquals(doctor.getName().getLastName(), "Deane");
-        Assert.assertEquals(doctor.getDemographic().getDateOfBirth(), date);
+        Assert.assertEquals(doctor.getDemographic().getDateOfBirth(), "04-29-1992");
         Assert.assertEquals(doctor.getSpecialization(), "Surgeon");
     }
 
     @Test
     public void testUpdate() {
-        Date date = new Date();
-        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder(date).build(), null, null, "Surgeon", null, null);
+        Doctor doctor = DoctorFactory.createDoctor(new Name.Builder("Deane").build(), new Demographic.Builder("04-29-1992").build(), null, null, "Surgeon", null, null);
         Doctor doctorCopy = new Doctor.Builder(doctor.getName()).copy(doctor).specialization("Radiologist").build();
         Assert.assertEquals(doctorCopy.getName().getLastName(), "Deane");
-        Assert.assertEquals(doctorCopy.getDemographic().getDateOfBirth(), date);
+        Assert.assertEquals(doctorCopy.getDemographic().getDateOfBirth(), "04-29-1992");
         Assert.assertEquals(doctorCopy.getSpecialization(), "Radiologist");
     }
 

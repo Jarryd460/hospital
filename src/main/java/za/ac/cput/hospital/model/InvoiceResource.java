@@ -11,7 +11,7 @@ import java.util.Date;
 public class InvoiceResource extends ResourceSupport {
 
     private Long resid;
-    private Date date;
+    private String date;
     private BigDecimal amount;
 
     private InvoiceResource() {}
@@ -26,7 +26,7 @@ public class InvoiceResource extends ResourceSupport {
         return resid;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -37,7 +37,7 @@ public class InvoiceResource extends ResourceSupport {
     public static class Builder {
 
         private Long resid;
-        private Date date;
+        private String date;
         private BigDecimal amount;
 
         public Builder(BigDecimal amount) {
@@ -49,7 +49,7 @@ public class InvoiceResource extends ResourceSupport {
             return this;
         }
 
-        public Builder date(Date date) {
+        public Builder date(String date) {
             this.date = date;
             return this;
         }

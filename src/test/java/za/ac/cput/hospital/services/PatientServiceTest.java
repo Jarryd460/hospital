@@ -33,13 +33,12 @@ public class PatientServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
         repository.deleteAll();
-        Date date = new Date();
-        Appointment appointment1 = AppointmentFactory.createAppointment(new Date(), "Checkup", new BigDecimal(10000), null);
-        Appointment appointment2 = AppointmentFactory.createAppointment(new Date(), "Heart transplant", new BigDecimal(250000), null);
+        Appointment appointment1 = AppointmentFactory.createAppointment("04-29-1992", "Checkup", new BigDecimal(10000), null);
+        Appointment appointment2 = AppointmentFactory.createAppointment("04-29-1992", "Heart transplant", new BigDecimal(250000), null);
         List<Appointment> appointmentList = new ArrayList<Appointment>();
         appointmentList.add(appointment1);
         appointmentList.add(appointment2);
-        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(date).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, appointmentList);
+        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder("04-29-1992").gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, appointmentList);
         repository.save(patient);
         id=patient.getId();
         Assert.assertNotNull(patient.getId());

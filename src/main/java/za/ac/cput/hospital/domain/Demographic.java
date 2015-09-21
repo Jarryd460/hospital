@@ -16,9 +16,7 @@ public class Demographic implements Serializable {
 
     private Sex gender;
     private Race race;
-    @Temporal(TemporalType.DATE)
-    @Past
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private Demographic() {}
 
@@ -36,7 +34,7 @@ public class Demographic implements Serializable {
         return race;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -44,9 +42,9 @@ public class Demographic implements Serializable {
 
         private Sex gender;
         private Race race;
-        private Date dateOfBirth;
+        private String dateOfBirth;
 
-        public Builder(Date dateOfBirth) {
+        public Builder(String dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
         }
 
@@ -60,7 +58,7 @@ public class Demographic implements Serializable {
             return this;
         }
 
-        public Builder dateOfBirth(Date dateOfBirth) {
+        public Builder dateOfBirth(String dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
             return this;
         }

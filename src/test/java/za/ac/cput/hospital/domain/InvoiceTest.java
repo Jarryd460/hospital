@@ -14,18 +14,16 @@ public class InvoiceTest {
 
     @Test
     public void testCreate() {
-        Date date = new Date();
-        Invoice invoice = InvoiceFactory.createInvoice(date, new BigDecimal(12000));
-        Assert.assertEquals(invoice.getDate(), date);
+        Invoice invoice = InvoiceFactory.createInvoice("04-29-1992", new BigDecimal(12000));
+        Assert.assertEquals(invoice.getDate(), "04-29-1992");
         Assert.assertEquals(invoice.getAmount(), new BigDecimal(12000));
     }
 
     @Test
     public void testUpdate() {
-        Date date = new Date();
-        Invoice invoice = InvoiceFactory.createInvoice(date, new BigDecimal(12000));
+        Invoice invoice = InvoiceFactory.createInvoice("04-29-1992", new BigDecimal(12000));
         Invoice invoiceCopy = new Invoice.Builder(invoice.getAmount()).copy(invoice).amount(new BigDecimal(10000)).build();
-        Assert.assertEquals(invoiceCopy.getDate(), date);
+        Assert.assertEquals(invoiceCopy.getDate(), "04-29-1992");
         Assert.assertEquals(invoiceCopy.getAmount(), new BigDecimal(10000));
     }
 

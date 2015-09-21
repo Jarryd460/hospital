@@ -31,7 +31,7 @@ public class InvoiceServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
         repository.deleteAll();
-        Invoice invoice1 = InvoiceFactory.createInvoice(new Date(), new BigDecimal(20000));
+        Invoice invoice1 = InvoiceFactory.createInvoice("04-29-1992", new BigDecimal(20000));
         repository.save(invoice1);
         id=invoice1.getId();
         Assert.assertNotNull(invoice1.getId());

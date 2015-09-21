@@ -29,8 +29,7 @@ public class PatientCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         repository.deleteAll();
-        Date date = new Date();
-        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder(date).gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, null);
+        Patient patient = PatientFactory.createPatient(new Name.Builder("Deane").build(), new Demographic.Builder("04-29-1992").gender(Sex.Male).build(), new Contact.Builder("0821234567").build(), null, null);
         repository.save(patient);
         id = patient.getId();
         Assert.assertNotNull(patient.getId());

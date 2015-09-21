@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class DemographicFactory {
 
-    public static Demographic createDemographic(Sex gender, Race race, Date dateOfBirth) {
+    public static Demographic createDemographic(Sex gender, Race race, String dateOfBirth) {
         return new Demographic.Builder(dateOfBirth).gender(gender).race(race).build();
     }
 

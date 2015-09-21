@@ -14,19 +14,17 @@ public class AppointmentTest {
 
     @Test
     public void testCreate() {
-        Date date = new Date();
-        Appointment appointment = AppointmentFactory.createAppointment(date, "Checkup", new BigDecimal(1000), null);
-        Assert.assertEquals( appointment.getDate(), date);
+        Appointment appointment = AppointmentFactory.createAppointment("04-29-1992", "Checkup", new BigDecimal(1000), null);
+        Assert.assertEquals( appointment.getDate(), "04-29-1992");
         Assert.assertEquals(appointment.getDescription(),"Checkup");
         Assert.assertNull(appointment.getInvoiceList());
     }
 
     @Test
     public void testUpdate() {
-        Date date = new Date();
-        Appointment appointment = AppointmentFactory.createAppointment(date, "Checkup", new BigDecimal(1000), null);
-        Appointment appointmentCopy = new Appointment.Builder(appointment.getDate()).copy(appointment).date(new Date()).build();
-        Assert.assertEquals(appointmentCopy.getDate(), date);
+        Appointment appointment = AppointmentFactory.createAppointment("04-29-1992", "Checkup", new BigDecimal(1000), null);
+        Appointment appointmentCopy = new Appointment.Builder(appointment.getDate()).copy(appointment).date("04-29-1994").build();
+        Assert.assertEquals(appointmentCopy.getDate(), "04-29-1994");
         Assert.assertEquals(appointmentCopy.getDescription(), "Checkup");
         Assert.assertNull(appointmentCopy.getInvoiceList());
     }

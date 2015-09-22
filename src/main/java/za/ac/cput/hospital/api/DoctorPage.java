@@ -75,7 +75,7 @@ public class DoctorPage {
         return new ResponseEntity<Doctor>(doctor, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/doctor/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/doctor/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createDoctor(@RequestBody Doctor doctor,    UriComponentsBuilder ucBuilder) {
         System.out.println("Creating Appointment " + doctor.getId());
 

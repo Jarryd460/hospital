@@ -73,7 +73,7 @@ public class PatientPage {
         return new ResponseEntity<Patient>(patient, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/patient/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/patient/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createPatient(@RequestBody Patient patient,    UriComponentsBuilder ucBuilder) {
         System.out.println("Creating Patient " + patient.getId());
 
@@ -90,7 +90,7 @@ public class PatientPage {
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/patient/update/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/patient/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Patient> updatePatient(@PathVariable("id") long id, @RequestBody Patient patient) {
         System.out.println("Updating Patient " + id);
 

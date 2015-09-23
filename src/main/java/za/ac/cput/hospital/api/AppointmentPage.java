@@ -77,7 +77,7 @@ public class AppointmentPage {
         return new ResponseEntity<Appointment>(appointment, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/appointment/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/appointment/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createAppointment(@RequestBody Appointment appointment,    UriComponentsBuilder ucBuilder) {
         System.out.println("Creating Appointment " + appointment.getId());
 
@@ -94,7 +94,7 @@ public class AppointmentPage {
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/appointment/update/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/appointment/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Appointment> updateAppointment(@PathVariable("id") long id, @RequestBody Appointment appointment) {
         System.out.println("Updating Appointment " + id);
 

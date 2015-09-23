@@ -64,7 +64,7 @@ public class InvoicePage {
         return new ResponseEntity<Invoice>(invoice, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/invoice/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/invoice/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createInvoice(@RequestBody Invoice invoice,    UriComponentsBuilder ucBuilder) {
         System.out.println("Creating Invoice " + invoice.getId());
 
@@ -81,7 +81,7 @@ public class InvoicePage {
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/invoice/update/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/invoice/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Invoice> updateInvoice(@PathVariable("id") long id, @RequestBody Invoice invoice) {
         System.out.println("Updating Invoice " + id);
 

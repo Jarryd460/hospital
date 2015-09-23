@@ -92,7 +92,7 @@ public class DoctorPage {
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/doctor/update/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/doctor/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Doctor> updateDoctor(@PathVariable("id") long id, @RequestBody Doctor doctor) {
         System.out.println("Updating Doctor " + id);
 

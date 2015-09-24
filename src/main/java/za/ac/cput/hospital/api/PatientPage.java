@@ -109,6 +109,7 @@ public class PatientPage {
                 .demographic(patient.getDemographic())
                 .contact(patient.getContact())
                 .address(patient.getAddress())
+                .appointmentList(patient.getAppointmentList())
                 .build();
         service.edit(updatedPatient);
         return new ResponseEntity<Patient>(updatedPatient, HttpStatus.OK);

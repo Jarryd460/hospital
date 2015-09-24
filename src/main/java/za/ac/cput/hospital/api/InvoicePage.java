@@ -95,12 +95,15 @@ public class InvoicePage {
         Invoice updatedInvoice = new Invoice
                 .Builder(currentInvoice.getAmount())
                 .copy(currentInvoice)
+                .id(invoice.getId())
+                .amount(invoice.getAmount())
+                .date(invoice.getDate())
                 .build();
         service.edit(currentInvoice);
         return new ResponseEntity<Invoice>(updatedInvoice, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/invoice/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/invoice/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Invoice> deleteInvoice(@PathVariable("id") long id) {
         System.out.println("Fetching & Deleting Invoice with id " + id);
 

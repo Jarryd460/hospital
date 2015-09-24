@@ -119,7 +119,7 @@ public class DoctorPage {
         return new ResponseEntity<Doctor>(updatedDoctor, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/doctor/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/doctor/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Doctor> deleteDoctor(@PathVariable("id") long id) {
         System.out.println("Fetching & Deleting Doctor with id " + id);
 

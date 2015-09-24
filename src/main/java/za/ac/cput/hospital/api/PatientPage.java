@@ -104,12 +104,17 @@ public class PatientPage {
         Patient updatedPatient = new Patient
                 .Builder(currentPatient.getName())
                 .copy(currentPatient)
+                .id(patient.getId())
+                .name(patient.getName())
+                .demographic(patient.getDemographic())
+                .contact(patient.getContact())
+                .address(patient.getAddress())
                 .build();
-        service.edit(currentPatient);
+        service.edit(updatedPatient);
         return new ResponseEntity<Patient>(updatedPatient, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/patient/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/patient/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Patient> deletePatient(@PathVariable("id") long id) {
         System.out.println("Fetching & Deleting Patient with id " + id);
 

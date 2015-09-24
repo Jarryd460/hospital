@@ -108,12 +108,17 @@ public class AppointmentPage {
         Appointment updatedAppointment = new Appointment
                 .Builder(currentAppointment.getDate())
                 .copy(currentAppointment)
+                .id(appointment.getId())
+                .amount(appointment.getAmount())
+                .date(appointment.getDate())
+                .description(appointment.getDescription())
+                .invoiceList(appointment.getInvoiceList())
                 .build();
         service.edit(currentAppointment);
         return new ResponseEntity<Appointment>(updatedAppointment, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/appointment/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/appointment/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Appointment> deleteAppointment(@PathVariable("id") long id) {
         System.out.println("Fetching & Deleting Appointment with id " + id);
 

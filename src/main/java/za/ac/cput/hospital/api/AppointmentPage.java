@@ -114,7 +114,7 @@ public class AppointmentPage {
                 .description(appointment.getDescription())
                 .invoiceList(appointment.getInvoiceList())
                 .build();
-        service.edit(currentAppointment);
+        service.edit(updatedAppointment);
         return new ResponseEntity<Appointment>(updatedAppointment, HttpStatus.OK);
     }
 

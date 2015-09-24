@@ -17,7 +17,7 @@ import java.util.List;
 public class DoctorServiceImpl implements DoctorService{
 
     @Autowired
-    DoctorRepository repository;
+    private DoctorRepository repository;
 
     @Override
     public Doctor findById(Long id) {

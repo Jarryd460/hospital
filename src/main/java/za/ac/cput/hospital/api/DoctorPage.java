@@ -106,8 +106,16 @@ public class DoctorPage {
         Doctor updatedDoctor = new Doctor
                 .Builder(currentDoctor.getName())
                 .copy(currentDoctor)
+                .id(doctor.getId())
+                .name(doctor.getName())
+                .demographic(doctor.getDemographic())
+                .contact(doctor.getContact())
+                .address(doctor.getAddress())
+                .specialization(doctor.getSpecialization())
+                .appointmentList(doctor.getAppointmentList())
+                .login(doctor.getLogin())
                 .build();
-        service.edit(currentDoctor);
+        service.edit(updatedDoctor);
         return new ResponseEntity<Doctor>(updatedDoctor, HttpStatus.OK);
     }
 

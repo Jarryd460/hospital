@@ -115,8 +115,8 @@ public class PatientPage {
         return new ResponseEntity<Patient>(updatedPatient, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/patient/delete/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Patient> deletePatient(@PathVariable("id") long id) {
+    @RequestMapping(value = "/patient/delete/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Patient> deletePatient(@PathVariable("id") long id, @RequestBody Patient pat) {
         System.out.println("Fetching & Deleting Patient with id " + id);
 
         Patient patient = service.findById(id);
@@ -126,7 +126,7 @@ public class PatientPage {
         }
 
         service.delete(patient);
-        return new ResponseEntity<Patient>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<Patient>(HttpStatus.OK);
     }
 
 }

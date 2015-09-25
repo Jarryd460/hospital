@@ -119,8 +119,8 @@ public class DoctorPage {
         return new ResponseEntity<Doctor>(updatedDoctor, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/doctor/delete/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Doctor> deleteDoctor(@PathVariable("id") long id) {
+    @RequestMapping(value = "/doctor/delete/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Doctor> deleteDoctor(@PathVariable("id") long id, @RequestBody Doctor doc) {
         System.out.println("Fetching & Deleting Doctor with id " + id);
 
         Doctor doctor = service.findById(id);
@@ -130,7 +130,7 @@ public class DoctorPage {
         }
 
         service.delete(doctor);
-        return new ResponseEntity<Doctor>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<Doctor>(HttpStatus.OK);
     }
 
 }

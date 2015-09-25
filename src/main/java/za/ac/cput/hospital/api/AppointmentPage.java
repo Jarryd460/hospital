@@ -118,8 +118,8 @@ public class AppointmentPage {
         return new ResponseEntity<Appointment>(updatedAppointment, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/appointment/delete/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Appointment> deleteAppointment(@PathVariable("id") long id) {
+    @RequestMapping(value = "/appointment/delete/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Appointment> deleteAppointment(@PathVariable("id") long id, @RequestBody Appointment app) {
         System.out.println("Fetching & Deleting Appointment with id " + id);
 
         Appointment appointment = service.findById(id);
@@ -129,7 +129,7 @@ public class AppointmentPage {
         }
 
         service.delete(appointment);
-        return new ResponseEntity<Appointment>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<Appointment>(HttpStatus.OK);
     }
 
 }
